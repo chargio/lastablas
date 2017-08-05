@@ -10,14 +10,17 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV["POSTGRESQL_MAX_CONNECTIONS"] || 5 %>
-  username: <%= user %>
-  password: <%= password %>
-  host: <%= ENV["#{db_service}_SERVICE_HOST"] %>
+  host: <%= ENV["#{db_service}_SERVICE_HOST"] || localhost %>
   port: <%= ENV["#{db_service}_SERVICE_PORT"] %>
   database: <%= ENV["POSTGRESQL_DATABASE"] %>
+  username: <%= user %>
+  password: <%= password %>
 
 development:
   <<: *default
+  username: shiftreservation
+  password: shiftreservation
+  database: shiftreservation_development
 
 test:
   adapter: sqlite3
