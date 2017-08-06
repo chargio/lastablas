@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Welcome to OpenShift</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8">
+    <title><%= t 'application.name' %></title>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render '/layouts/masthead' %>
+    <%= render '/layouts/alerts' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

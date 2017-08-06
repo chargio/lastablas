@@ -44,30 +44,31 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.15'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails',              '~> 3.6'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'faker'
   gem 'coveralls', require: false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'selenium-webdriver'
 end
 
 group :development do
+  gem 'guard-rspec', :require => false
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'rubocop', :require => false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'guard-rspec',                      :require => false
-  gem 'rubocop',                          :require => false
 end
 
 # Use SCSS for stylesheets and patternfly
 # Install it wil bower, not as a gem, to install JS dependencies
+gem 'jquery-rails'
 gem 'patternfly-sass', '~> 3.23.0'
 #
 # Devise
 #
 gem 'devise', '~> 4.0'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
