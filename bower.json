@@ -18,6 +18,6 @@
     "patternfly-sass": "^3.23.0"
   },
   "resolutions": {
-    "jquery": "1.9.1 - 3"
+    "jquery": "3.2.1"
   }
 }
