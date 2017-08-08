@@ -43,8 +43,37 @@ es:
           first_name: "Nombre"
           last_name: "Apellido"
           email: "Correo electrónico"
+          phone: "Teléfono"
           password: "Password"
           password_confirmation: "Confirmación del password"
-
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank:       "no puede estar vacío"
+              too_short:   "es muy corto (el mínimo son %{count} caracteres)"
+              too_long:    "es muy largo (el máximo son %{count} caracteres)"
+            last_name:
+              blank:       "no puede estar vacío"
+              too_short:    "es muy corto (el mínimo son %{count} caracteres)"
+              too_long:     "es muy largo (el máximo son %{count} caracteres)"
+            email:
+              blank:       "no puede estar vacío"
+              too_short:   "es muy corto (el mínimo son %{count} caracteres)"
+              too_long:    "es muy largo (el máximo son %{count} caracteres)"
+              invalid:     "no es válido"
+              duplicated:  "ya existe"
+            password:
+              blank:       "no puede estar vacío"
+              too_short:   "es muy corto (el mínimo son %{count} caracteres)"
+              too_long:    "es muy largo (el máximo son %{count} caracteres)"
+            password_confirmation:
+              confirmation: "tiene que coincidir con el password"
+            phone:
+              blank:       "no puede estar vacío"
+              too_short:   "es muy corto (el mínimo son %{count} caracteres)"
+              too_long:    "es muy largo (el máximo son %{count} caracteres)"
+              invalid:     "no es válido"
 
 
