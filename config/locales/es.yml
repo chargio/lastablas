@@ -30,7 +30,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  hello: "Hola Mundo"
+  registrations:
+    new:
+      characters_minimum: "mínimo %{characters} caracteres"
+
+  sign_up: "Nueva cuenta"
   application:
     name:    "Parroquia de Las Tablas"
+  activerecord:
+    attributes:
+      user:
+          first_name: "Nombre"
+          last_name: "Apellido"
+          email: "Correo electrónico"
+          password: "Password"
+          password_confirmation: "Confirmación del password"
+
+
 
