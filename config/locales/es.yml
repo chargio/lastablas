@@ -75,5 +75,8 @@ es:
               too_short:   "es muy corto (el mínimo son %{count} caracteres)"
               too_long:    "es muy largo (el máximo son %{count} caracteres)"
               invalid:     "no es válido"
+  users:
+    show:
+      edit_user:  "Editar usuario"
 
 
