@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-
   get 'welcome/info',  as: 'info'
   get 'welcome/help',  as: 'help'
   get 'welcome/about', as: 'about'
@@ -9,4 +7,5 @@ Rails.application.routes.draw do
   root 'welcome#info'
   devise_for :users
   resources :users, only: [:show]
+  resources :offsprings, except: [:index]
 end

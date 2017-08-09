@@ -1,0 +1,3 @@
+class OffspringsController < ApplicationController
+
+end
