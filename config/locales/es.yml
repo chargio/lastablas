@@ -30,10 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
+  layouts:
+    masthead:
+      log_in: "Entrar"
+      help: "Ayuda"
+      info: "Información"
+      about: "Acerca de"
   registrations:
     new:
       characters_minimum: "mínimo %{characters} caracteres"
-
   sign_up: "Nueva cuenta"
   application:
     name:    "Parroquia de Las Tablas"
