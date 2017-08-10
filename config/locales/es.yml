@@ -94,10 +94,10 @@ es:
       show:   "Mostrar"
       assign: "Elegir turno"
   offsprings:
-
     new:
       create:              "Crear"
       offspring_added:     "Se añadió el descendiente #{offspring}"
       offspring_not_added: "No se pudo añadir el descendiente"
-
+    create:
+      offspring_added:     "Se añadió el descendiente #{offspring}"
 
