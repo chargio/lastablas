@@ -30,12 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
+  grades:
+    primary_first:  "Primero de primaria"
+    primary_second: "Segundo de primaria"
+    primary_third:  "Tercero de primaria"
+    others:         "Otros"
   layouts:
     masthead:
       log_in: "Entrar"
       help: "Ayuda"
       info: "Información"
       about: "Acerca de"
+      user_panel: "Panel de Usuario"
   registrations:
     new:
       characters_minimum: "mínimo %{characters} caracteres"
@@ -83,5 +89,15 @@ es:
   users:
     show:
       edit_user:  "Editar usuario"
+      add_offspring: "Añadir descendencia"
+    offspring:
+      show:   "Mostrar"
+      assign: "Elegir turno"
+  offsprings:
+
+    new:
+      create:              "Crear"
+      offspring_added:     "Se añadió el descendiente #{offspring}"
+      offspring_not_added: "No se pudo añadir el descendiente"
 
 
