@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root 'welcome#info'
   devise_for :users
   resources :users, only: [:show]
-  resources :offsprings
+  resources :offsprings do
+    resources :assignments, except: [:index, :show]
+  end
   resources :rooms, only: [:index]
   resources :shifts, only: [:show]
 end
