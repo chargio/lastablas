@@ -112,4 +112,10 @@ es:
       offspring_not_added: "No se pudo añadir el catecúmeno"
     create:
       offspring_added:     "Se añadió el catecúmeno #{offspring}"
+    index:
+      offsprings:    "Catecúmenos"
+      add_offspring: "Añadir catecúmeno"
+    offspring:
+      assign: "Asignar turno"
+      show:   "Mostrar"
 

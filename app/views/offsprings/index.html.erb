@@ -1,12 +1,14 @@
-<div class="container">
+<div class="container-fluid">
   <h2> <%=t('.offsprings')%></h2>
 
-  <% unless @offsprings.empty? %>
-      <%= render partial: 'offspring', collection: @offsprings %>
-  <% end %>
-
+  <div class="list-group list-view-pf list-view-pf-view">
+    <% unless @offsprings.empty? %>
+        <%= render partial: 'offspring', collection: @offsprings %>
+    <% end %>
+  </div>
 
   <div class="btn-group">
-    <%= link_to t('.add_offspring'), new_offspring_path, class: "btn btn-default" %>
+    <%= link_to t('.add_offspring'), new_offspring_path, class: "btn btn-primary" %>
   </div>
 </div>
+
