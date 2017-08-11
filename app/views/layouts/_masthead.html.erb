@@ -46,12 +46,7 @@
                 </div>
             <% end %>
           </li>
-          <li class="divider"></li>
-          <li class="dropdown-submenu">
-            <a href="#" tabindex="-1">
-              <%= t '.more_options' %>
-            </a>
-          </li>
+
           <li class="divider"></li>
           <li>
             <%= link_to about_path do %>
@@ -73,12 +68,12 @@
       </li>
       <li>
         <% if user_signed_in? %>
-            <%# link_to t('.offsprings'), user_offsprings_path %>
+            <%= link_to t('.offsprings'), offsprings_path %>
         <% end %>
       </li>
       <li>
         <% if user_signed_in? %>
-            <%# link_to t('.rooms'), rooms_path %>
+            <%= link_to t('.rooms'), rooms_path %>
         <% end %>
       </li>
       <li class="dropdown">

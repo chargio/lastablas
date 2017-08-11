@@ -3,6 +3,10 @@ class OffspringsController < ApplicationController
     @offspring = Offspring.new(user: current_user)
   end
 
+  def index
+    @offsprings = Offspring.where(user: current_user)
+  end
+
   def create
     @offspring = Offspring.new(offsprings_params)
     @offspring.user = current_user

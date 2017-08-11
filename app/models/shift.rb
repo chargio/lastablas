@@ -3,8 +3,8 @@ class Shift < ApplicationRecord
   TIME_REGEX = /\A([01]\d|2[0123]):[012345]\d\z/
   belongs_to :room
 
-  has_many :assignments, dependent: destroy
-  enum :day_of_week: Date::DAYS_INTO_WEEK
+  has_many :assignments, dependent: :destroy
+  enum :day_of_week => Date::DAYS_INTO_WEEK
   validates :day_of_week, presence: true
   validates :start_time, presence: true
   validates :start_time, format: { with: TIME_REGEX, message: I18n.t(".start_time.invalid_format") }
