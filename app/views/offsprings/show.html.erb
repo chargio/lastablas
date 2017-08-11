@@ -31,7 +31,11 @@
   </div>
 </div>
 
-Add buttons here
-Back
-Edit
-Delete
+<p>TODO: SHOW ASSIGNMENT HERE IF THERE IS ONE
+</p>
+<br>
+<%= link_to t('.back'), :back, class: "btn btn-default"%>
+<%= link_to t('.edit'), edit_offspring_path(@offspring), class: "btn btn-default"%>
+
+<%= button_to (t'.delete_offspring'), offspring_path(@offspring), class: "btn btn-danger",
+data: { confirm: (t'.are_you_sure?') }, method: :delete %>

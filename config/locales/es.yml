@@ -118,4 +118,7 @@ es:
     offspring:
       assign: "Asignar turno"
       show:   "Mostrar"
+    show:
+      delete_offspring: "Borrar catecúmeno"
+      are_you_sure?:    "¿Está seguro? Esta acción no puede deshacerse"
 
