@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show]
   resources :offsprings, except: [:index]
+  resources :rooms, only: [:index, :show] do
+    resources :shifts, only: [:index]
+  end
+  resources :shifts, only: [:show]
 end
