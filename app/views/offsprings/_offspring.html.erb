@@ -18,9 +18,9 @@
         </div>
         <div class="list-group-item-text">
           <% if offspring.assignment.nil? %>
-              TODO: No assignment right now
+              <%= t '.no_assignment_yet' %>
           <% else %>
-              <%= offspring.assignment.shift %>
+              <strong><%= offspring.assignment.shift.full_name %></strong>
           <% end %>
         </div>
       </div>

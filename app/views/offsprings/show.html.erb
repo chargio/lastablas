@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h2>
-    <%= t '.new_offspring' %>
+    <%= t '.offspring' %>
   </h2>
   <div class="form">
     <div class="form-group">
@@ -31,11 +31,14 @@
   </div>
 </div>
 
-<p>TODO: SHOW ASSIGNMENT HERE IF THERE IS ONE
+<p>
+  <% if @assignment %>
+    <div class="alert alert-success"> <h4><strong><%= @assignment.shift.full_name %></strong></h4></div>
+  <% end %>
 </p>
 <br>
 <%= link_to t('.back'), :back, class: "btn btn-default"%>
-<%= link_to t('.edit'), edit_offspring_path(@offspring), class: "btn btn-default"%>
+<%= link_to t('.edit'), edit_offspring_path(@offspring), class: "btn btn-primary"%>
 
-<%= button_to (t'.delete_offspring'), offspring_path(@offspring), class: "btn btn-danger",
+<%= link_to (t'.delete_offspring'), offspring_path(@offspring), class: "btn btn-danger",
 data: { confirm: (t'.are_you_sure?') }, method: :delete %>

@@ -1,10 +1,10 @@
 <li>
   <div class = "panel panel-info">
     <div class="panel-heading">
-    <strong><%= shift.start_time %> => <%= shift.end_time %> </strong>
-  </div>
-  <div class="panel-body">
-    <p> Sites available: TODO(Sites available)</p>
-  </div>
+      <strong><%= shift.start_time %> => <%= shift.end_time %> </strong>
+    </div>
+    <div class="panel-body">
+      <p> <%= "#{t '.sites_available'}: #{shift.sites_available}" %></p>
+    </div>
   </div>
 </li>

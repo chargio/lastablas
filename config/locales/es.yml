@@ -61,6 +61,12 @@ es:
   application:
     name:    "Parroquia de Las Tablas"
   activerecord:
+    models:
+      user: "Usuario"
+      offspring: "Catecúmeno"
+      assignment: "Asignación"
+      Room: "Aula"
+      Shift: "Turno"
     attributes:
       user:
           first_name: "Nombre"
@@ -69,6 +75,10 @@ es:
           phone: "Teléfono"
           password: "Password"
           password_confirmation: "Confirmación del password"
+      offspring:
+          first_name: "Nombre"
+          last_name: "Apellidos"
+          grade: "Curso"
     errors:
       models:
         user:
@@ -98,20 +108,41 @@ es:
               too_short:   "es muy corto (el mínimo son %{count} caracteres)"
               too_long:    "es muy largo (el máximo son %{count} caracteres)"
               invalid:     "no es válido"
+  assignments:
+    create:
+      assignment_added:     "Se añadió la asignación"
+      assignment_not_added: "Ha habido un error añadiendo la asignación"
+    new:
+      choose_shifts: "Elija turno para %{who}"
+    room:
+      capacity: "capacidad"
+    shift:
+      sites_available: "Sitios disponibles"
+      select: "seleccionar"
   users:
     show:
-      edit_user:  "Editar usuario"
+      edit_user:     "Editar usuario"
       add_offspring: "Añadir catecúmeno"
+      offsprings: "Catecúmenos"
     offspring:
       show:   "Mostrar"
       assign: "Elegir turno"
+      no_assignment_yet: "No tiene turno asignado todavía"
+  rooms:
+    shift:
+      sites_available: "Sitios disponibles"
   offsprings:
     new:
       create:              "Crear"
+      new_offspring:       "Añadir catecúmeno"
       offspring_added:     "Se añadió el catecúmeno #{offspring}"
       offspring_not_added: "No se pudo añadir el catecúmeno"
     create:
       offspring_added:     "Se añadió el catecúmeno #{offspring}"
+    destroy:
+      offspring_deleted:     "Se ha borrado el catecúmeno %{offspring}"
+      offspring_not_deleted: "No se ha podido borrar el catecúmeno"
+      offspring_not_found:   "El catecúmeno no existe"
     index:
       offsprings:    "Catecúmenos"
       add_offspring: "Añadir catecúmeno"
@@ -119,6 +150,9 @@ es:
       assign: "Asignar turno"
       show:   "Mostrar"
     show:
-      delete_offspring: "Borrar catecúmeno"
       are_you_sure?:    "¿Está seguro? Esta acción no puede deshacerse"
-
+      back: "Volver"
+      delete_offspring: "Borrar catecúmeno"
+      edit: "Editar"
+      offspring: "Catecúmeno"
+      offspring_not_found:   "El catecúmeno no existe"

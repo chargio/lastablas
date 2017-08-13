@@ -1,7 +1,6 @@
 class Shift < ApplicationRecord
   belongs_to :room
   TIME_REGEX = /\A([01]\d|2[0123]):[012345]\d\z/
-  belongs_to :room
 
   has_many :assignments, dependent: :destroy
   enum :day_of_week => Date::DAYS_INTO_WEEK
@@ -18,5 +17,23 @@ class Shift < ApplicationRecord
 
   validates :sites_reserved, numericality: { only_integer: true }
 
+  def shift_start
+    "#{I18n.t day_of_week, scope: 'week'} #{start_time}"
+  end
 
+  def room_name
+    @room_name || room.name
+  end
+
+  def full_name
+    "#{room_name}: #{shift_start}"
+  end
+
+  def capacity
+    @capacity || room.capacity
+  end
+
+  def sites_available
+    capacity - Assignment.where(shift: self).count - sites_reserved
+  end
 end

@@ -21,10 +21,23 @@ class OffspringsController < ApplicationController
 
   def show
     @offspring = Offspring.find_by(user: current_user, id: params[:id])
+    @assignment = Assignment.find_by(offspring: @offspring)
     if @offspring.nil?
       flash[:alert] = t('.offspring_not_found')
       redirect_to user_path(current_user)
     end
+  end
+
+  def destroy
+    @offspring = Offspring.find_by(id: params["id"], user: current_user)
+    if @offspring.nil?
+      flash[:alert] = t '.offspring_not_found'
+    elsif @offspring.destroy
+      flash[:success] = (t ".offspring_deleted", offspring: @offspring.first_name)
+    else
+      flash[:alert] = (t ".offspring_not_deleted")
+    end
+    redirect_to offsprings_path
   end
 
   private
