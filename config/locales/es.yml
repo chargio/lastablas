@@ -52,6 +52,7 @@ es:
       log_out:    "Salir"
       offsprings: "Catecúmenos"
       rooms:      "Turnos"
+      signed_in:  "Autenticado"
       sign_up:    "Darse de alta"
       user_panel: "Usuario"
   registrations:
@@ -60,6 +61,9 @@ es:
   sign_up: "Nueva cuenta"
   application:
     name:    "Parroquia de Las Tablas"
+  activemailer:
+    subjects:
+      assignment_added: "Recordatorio de asignación de turno de catequesis"
   activerecord:
     models:
       user: "Usuario"
@@ -157,6 +161,14 @@ es:
     destroy:
       offspring_deleted:     "Se ha borrado el catecúmeno %{offspring}"
       offspring_not_deleted: "No se ha podido borrar el catecúmeno"
+      offspring_not_found:   "El catecúmeno no existe"
+    edit:
+      update: "Actualizar"
+      edit_offspring: "Editar catecúmeno %{name}"
+      offspring_not_found:   "El catecúmeno no existe"
+    update:
+      offspring_updated: "Los datos de %{name} se han actualizado"
+      offspring_not_updated: "Error al actualizar los datos"
       offspring_not_found:   "El catecúmeno no existe"
     index:
       offsprings:    "Catecúmenos"

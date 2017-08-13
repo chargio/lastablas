@@ -18,6 +18,7 @@ class AssignmentsController < ApplicationController
         flash[:alert] = (t '.assignment_not_added')
         redirect_to offsprings_path
       elsif @assignment.save
+        AssignmentsMailer.shift_assigned_email(current_user, @assignment.offspring, @assignment).deliver_later
         flash[:success] = (t '.assignment_added')
         redirect_to offsprings_path
       else
