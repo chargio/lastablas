@@ -50,9 +50,11 @@ es:
       info:       "Información"
       log_in:     "Entrar"
       log_out:    "Salir"
+      not_identified: "Desconocido"
       offsprings: "Catecúmenos"
       rooms:      "Turnos"
       signed_in:  "Autenticado"
+      not_signed_in: "Necesita autenticarse"
       sign_up:    "Darse de alta"
       user_panel: "Usuario"
   registrations:
