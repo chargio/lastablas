@@ -9,6 +9,6 @@ class UsersController < ApplicationController
       flash[:alert] = t '.user_not_found'
       redirect_to user_offsprings_path
     end
-    @offsprings = @user.offsprings
+    @offsprings = @user.offsprings.includes(:assignment)
   end
 end

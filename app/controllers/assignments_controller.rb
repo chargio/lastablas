@@ -9,19 +9,21 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @assignment = Assignment.find_by(offspring: params[:offspring_id]) || Assignment.new
-    @assignment.shift = Shift.find_by(id: params[:shift_id])
-    @assignment.offspring = Offspring.find_by(id: params[:offspring_id], user: current_user)
+    Assignment.transaction do
+      @assignment = Assignment.find_by(offspring: params[:offspring_id]) || Assignment.new
+      @assignment.shift = Shift.find_by(id: params[:shift_id])
+      @assignment.offspring = Offspring.find_by(id: params[:offspring_id], user: current_user)
 
-    if @assignment.offspring.nil?
-      flash[:alert] = (t '.assignment_not_added')
-      redirect_to offsprings_path
-    elsif @assignment.save
-      flash[:success] = (t '.assignment_added')
-      redirect_to offsprings_path
-    else
-      flash[:alert] = (t '.assignment_not_added')
-      render 'new'
+      if @assignment.offspring.nil?
+        flash[:alert] = (t '.assignment_not_added')
+        redirect_to offsprings_path
+      elsif @assignment.save
+        flash[:success] = (t '.assignment_added')
+        redirect_to offsprings_path
+      else
+        flash[:alert] = (t '.assignment_not_added')
+        render 'new'
+      end
     end
   end
 end

@@ -4,8 +4,12 @@
       <strong><%= shift.start_time %> => <%= shift.end_time %> </strong>
     </div>
     <div class="panel-body">
-      <%= link_to t(".select"), offspring_assignments_path(offspring_id: @offspring, shift_id: shift.id), method: :post,
-                  class: "btn btn-primary" %>
+      <% if shift.sites_available? %>
+        <%= link_to t(".select"), offspring_assignments_path(offspring_id: @offspring, shift_id: shift.id), method: :post,
+                    class: "btn btn-primary" %>
+      <% else %>
+          <strong><%= t '.is_full' %></strong>
+      <% end %>
         <p> <%= "#{t '.sites_available'}" %> <span class='badge'>  <%= shift.sites_available %>  </span></p>
     </div>
   </div>

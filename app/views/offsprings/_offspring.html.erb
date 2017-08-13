@@ -20,7 +20,7 @@
           <% if offspring.assignment.nil? %>
               <%= t '.no_assignment_yet' %>
           <% else %>
-              <strong><%= offspring.assignment.shift.full_name %></strong>
+              <strong class="btn btn-warning"><%= offspring.assignment.full_name %></strong>
           <% end %>
         </div>
       </div>

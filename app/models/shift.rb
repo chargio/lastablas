@@ -36,4 +36,8 @@ class Shift < ApplicationRecord
   def sites_available
     capacity - Assignment.where(shift: self).count - sites_reserved
   end
+
+  def sites_available?
+    sites_available > 0
+  end
 end

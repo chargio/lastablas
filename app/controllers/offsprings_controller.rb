@@ -1,13 +1,20 @@
 class OffspringsController < ApplicationController
+  ALLOWED_GRADES = ['primary_first'].freeze
+
   def new
     @offspring = Offspring.new(user: current_user)
   end
 
   def index
-    @offsprings = Offspring.where(user: current_user)
+    @offsprings = Offspring.includes(:assignment).where(user: current_user)
   end
 
   def create
+    unless ALLOWED_GRADES.include? offsprings_params[:grade]
+      flash[:danger] = t '.invalid_grade'
+      redirect_to offsprings_path
+      return
+    end
     @offspring = Offspring.new(offsprings_params)
     @offspring.user = current_user
     if @offspring.save

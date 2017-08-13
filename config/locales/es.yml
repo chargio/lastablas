@@ -81,6 +81,10 @@ es:
           grade: "Curso"
     errors:
       models:
+        assignment:
+          attributes:
+            shift:
+              no_sites_available: "está lleno"
         user:
           attributes:
             first_name:
@@ -108,6 +112,10 @@ es:
               too_short:   "es muy corto (el mínimo son %{count} caracteres)"
               too_long:    "es muy largo (el máximo son %{count} caracteres)"
               invalid:     "no es válido"
+        offspring:
+          attributes:
+            last_name:
+              different: "deben ser iguales en todos los catecúmenos"
   assignments:
     create:
       assignment_added:     "Se añadió la asignación"
@@ -118,7 +126,8 @@ es:
       capacity: "capacidad"
     shift:
       sites_available: "Sitios disponibles"
-      select: "seleccionar"
+      select: "Seleccionar"
+      is_full: "Completo"
   users:
     show:
       edit_user:     "Editar usuario"
@@ -131,6 +140,10 @@ es:
   rooms:
     shift:
       sites_available: "Sitios disponibles"
+    index:
+      shifts: "Turnos"
+    room:
+      capacity: "Capacidad"
   offsprings:
     new:
       create:              "Crear"
@@ -139,6 +152,8 @@ es:
       offspring_not_added: "No se pudo añadir el catecúmeno"
     create:
       offspring_added:     "Se añadió el catecúmeno #{offspring}"
+      offspring_not_added:  "No se pudo añadir al catecúmeno"
+      invalid_grade: "Para añadir un catecúmeno de este curso contacte directamente con la parroquia, por favor"
     destroy:
       offspring_deleted:     "Se ha borrado el catecúmeno %{offspring}"
       offspring_not_deleted: "No se ha podido borrar el catecúmeno"
@@ -147,12 +162,15 @@ es:
       offsprings:    "Catecúmenos"
       add_offspring: "Añadir catecúmeno"
     offspring:
-      assign: "Asignar turno"
-      show:   "Mostrar"
+      assign:            "Asignar turno"
+      show:              "Mostrar"
+      no_assignment_yet: "No tiene turno asignado todavía"
     show:
       are_you_sure?:    "¿Está seguro? Esta acción no puede deshacerse"
+      assign: "Asignar turno"
       back: "Volver"
       delete_offspring: "Borrar catecúmeno"
       edit: "Editar"
+      no_assignment_yet: "No tiene turno asignado todavía"
       offspring: "Catecúmeno"
       offspring_not_found:   "El catecúmeno no existe"
