@@ -57,6 +57,13 @@ es:
       not_signed_in: "Necesita autenticarse"
       sign_up:    "Darse de alta"
       user_panel: "Usuario"
+    admin_masthead:
+      help: "Ayuda"
+      info: "Información"
+      about: "Acerca de"
+      offsprings: "Catecúmenos"
+      rooms: "Aulas"
+      users: "Usuarios"
   time:
     formats:
       default: "%d/%m/%Y"
@@ -80,16 +87,25 @@ es:
       Shift: "Turno"
     attributes:
       user:
+          id: "#"
+          email: "Correo electrónico"
           first_name: "Nombre"
           last_name: "Apellido"
-          email: "Correo electrónico"
-          phone: "Teléfono"
+          offsprings: "Catecúmenos"
           password: "Password"
           password_confirmation: "Confirmación del password"
+          phone: "Teléfono"
+          created_at: "Creado en:"
+          updated_at: "Actualizado en:"
       offspring:
+          id: "#"
+          grade: "Curso"
           first_name: "Nombre"
           last_name: "Apellidos"
-          grade: "Curso"
+          shift: "Turno"
+          user: "Usuario"
+          created_at: "Creado en:"
+          updated_at: "Actualizado en:"
     errors:
       models:
         assignment:
@@ -127,6 +143,16 @@ es:
           attributes:
             last_name:
               different: "deben ser iguales en todos los catecúmenos"
+  admin:
+    offsprings:
+      index:
+        offsprings: "Catecúmenos"
+    users:
+      index:
+        users: "Usuarios"
+      user:
+        admin: "Administrador"
+        not_admin:    "No"
   assignments:
     create:
       assignment_added:     "Se añadió la asignación"

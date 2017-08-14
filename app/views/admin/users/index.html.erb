@@ -1,9 +1,12 @@
-<h1> <%= User.human_attribute_name('user') %></h1>
+<h1> <%= t ('.users') %></h1>
 <table class="datatable table table-striped table-bordered">
   <thead>
   <tr>
     <th>
       <%= User.human_attribute_name('id') %>
+    </th>
+    <th>
+      <%= User.human_attribute_name('admin') %>
     </th>
     <th>
       <%= User.human_attribute_name('email') %>
