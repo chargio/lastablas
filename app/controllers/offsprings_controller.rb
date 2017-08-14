@@ -35,7 +35,12 @@ class OffspringsController < ApplicationController
   end
 
   def show
-    @offspring = Offspring.find_by(user: current_user, id: params[:id])
+    if current_user.admin?
+      @offspring = Offspring.find_by(id: params[:id])
+    else
+      @offspring = Offspring.find_by(user: current_user, id: params[:id])
+    end
+
     @assignment = Assignment.find_by(offspring: @offspring)
     if @offspring.nil?
       flash[:alert] = t('.offspring_not_found')

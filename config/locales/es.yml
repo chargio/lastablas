@@ -57,6 +57,11 @@ es:
       not_signed_in: "Necesita autenticarse"
       sign_up:    "Darse de alta"
       user_panel: "Usuario"
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
   registrations:
     new:
       characters_minimum: "mínimo %{characters} caracteres"

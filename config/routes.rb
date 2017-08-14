@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   end
   resources :rooms, only: [:index]
   resources :shifts, only: [:show]
+
+  namespace :admin do
+    resources :users, only: [:index]
+    resources :offsprings, only: [:index]
+  end
 end

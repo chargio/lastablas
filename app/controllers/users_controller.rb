@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = if current_user.admin?
-            User.includes(:offpsrings).references(:offsprings).find_by(id: params[id])
+            User.includes(:offsprings).references(:offsprings).find_by(id: params[:id])
             else
             User.includes(:offsprings).references(:offsprings).find_by(id: current_user.id)
             end
