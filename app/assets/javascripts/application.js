@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require bootstrap-select
 //= require datatables
 //= require patternfly
 //= require matchHeight
