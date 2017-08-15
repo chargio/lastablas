@@ -155,6 +155,18 @@ es:
       index:
         offsprings: "Catecúmenos"
         download_offsprings: "Descargar lista de catecúmenos"
+    rooms:
+      shift:
+        sites_available: "Sitios disponibles"
+      index:
+        shifts: "Turnos"
+      room:
+        capacity: "Capacidad"
+    shifts:
+      show:
+        offsprings: "Catecúmenos"
+        download_offsprings: "Descargar lista de catecúmenos"
+
     users:
       index:
         users: "Usuarios"
