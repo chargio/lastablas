@@ -1,6 +1,9 @@
 <h1>
   <%= (t '.offsprings').to_s %>
 </h1>
+<p>
+  <%= link_to(t('.download_offsprings'), admin_offsprings_path(format: :csv), class: "btn btn-lg btn-primary") %>
+</p>
 <table class="datatable table table-striped table-bordered">
   <thead>
   <tr>
@@ -33,4 +36,12 @@
   <tbody>
   <%= render @offsprings %>
   </tbody>
+</table>
 
+
+<script>
+    // Initialize Datatables
+    $(document).ready(function() {
+        $('.datatable').dataTable();
+    });
+</script>

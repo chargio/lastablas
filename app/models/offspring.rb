@@ -1,4 +1,5 @@
 class Offspring < ApplicationRecord
+  require 'csv'
   i18n_scope = 'activerecord.errors.models.offspring.attributes'.freeze
   belongs_to :user
   has_one :assignment, dependent: :destroy
@@ -19,5 +20,17 @@ class Offspring < ApplicationRecord
 
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def self.to_csv
+    attributes = %w[id first_name last_name grade shift&.full_name user&.full_name]
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |offspring|
+        csv << attributes.map{ |attr| offspring.instance_eval(attr) }
+      end
+    end
   end
 end

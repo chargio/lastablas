@@ -18,4 +18,16 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.to_csv
+    attributes = %w[id first_name last_name phone email]
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |user|
+        csv << attributes.map{ |attr| user.instance_eval(attr) }
+      end
+    end
+  end
 end

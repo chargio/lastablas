@@ -58,12 +58,17 @@ es:
       sign_up:    "Darse de alta"
       user_panel: "Usuario"
     admin_masthead:
-      help: "Ayuda"
-      info: "Información"
-      about: "Acerca de"
-      offsprings: "Catecúmenos"
-      rooms: "Aulas"
-      users: "Usuarios"
+      about:         "Acerca de"
+      help:          "Ayuda"
+      info:          "Información"
+      log_in:        "Entrar"
+      log_out:       "Salir"
+      offsprings:    "Catecúmenos"
+      rooms:         "Turnos"
+      users:         "Usuarios"
+      signed_in:     "Autenticado"
+      not_signed_in: "Necesita autenticarse"
+      sign_up:       "Darse de alta"
   time:
     formats:
       default: "%d/%m/%Y"
@@ -139,6 +144,8 @@ es:
               too_short:   "es muy corto (el mínimo son %{count} caracteres)"
               too_long:    "es muy largo (el máximo son %{count} caracteres)"
               invalid:     "no es válido"
+            confirmation_token:
+              invalid:     "no es válido"
         offspring:
           attributes:
             last_name:
@@ -147,9 +154,11 @@ es:
     offsprings:
       index:
         offsprings: "Catecúmenos"
+        download_offsprings: "Descargar lista de catecúmenos"
     users:
       index:
         users: "Usuarios"
+        download_users: "Descargar lista de usuarios"
       user:
         admin: "Administrador"
         not_admin:    "No"
@@ -185,10 +194,10 @@ es:
     new:
       create:              "Crear"
       new_offspring:       "Añadir catecúmeno"
-      offspring_added:     "Se añadió el catecúmeno #{offspring}"
+      offspring_added:     "Se añadió el catecúmeno %{offspring}"
       offspring_not_added: "No se pudo añadir el catecúmeno"
     create:
-      offspring_added:     "Se añadió el catecúmeno #{offspring}"
+      offspring_added:     "Se añadió el catecúmeno %{offspring}"
       offspring_not_added:  "No se pudo añadir al catecúmeno"
       invalid_grade: "Para añadir un catecúmeno de este curso contacte directamente con la parroquia, por favor"
     destroy:

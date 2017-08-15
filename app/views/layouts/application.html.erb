@@ -15,10 +15,9 @@
       <%= render '/layouts/masthead' %>
     <% end %>
     <%= render '/layouts/alerts' %>
+    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <div class="container-fluid">
       <%= yield %>
     </div>
-
-    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

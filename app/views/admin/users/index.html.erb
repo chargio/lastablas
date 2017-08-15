@@ -1,4 +1,7 @@
 <h1> <%= t ('.users') %></h1>
+<p>
+  <%= link_to(t('.download_users'), admin_users_path(format: :csv), class: "btn btn-lg btn-primary") %>
+</p>
 <table class="datatable table table-striped table-bordered">
   <thead>
   <tr>
@@ -24,6 +27,9 @@
       <%= User.human_attribute_name('phone') %>
     </th>
     <th>
+      <%= User.human_attribute_name('confirmed_at') %>
+    </th>
+    <th>
       <%= User.human_attribute_name('created_at') %>
     </th>
     <th>
@@ -35,3 +41,11 @@
   <%= render @users %>
   </tbody>
 </table>
+
+
+<script>
+    // Initialize Datatables
+    $(document).ready(function() {
+        $('.datatable').dataTable();
+    });
+</script>
