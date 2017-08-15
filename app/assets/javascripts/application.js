@@ -16,3 +16,4 @@
 //# require dataTables
 //# require matchHeight
 //= require patternfly
+//= require_tree .
