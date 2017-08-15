@@ -15,4 +15,3 @@
 //= require bootstrap
 //= require datatables
 //= require patternfly
-//= require matchHeight
