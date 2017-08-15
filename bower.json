@@ -11,12 +11,12 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "vendor/assets/bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "patternfly-sass": "^3.23.0",
-    "datatables-bootstrap": "^1.0.0"
+    "patternfly-sass": "^3.23.0"
   },
   "resolutions": {
     "jquery": "1.9.4"
