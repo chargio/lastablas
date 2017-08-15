@@ -11,4 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
-Rails.application.config.assets.precompile += %w( datatables/media/js/dataTables.bootstrap.js )
+# Rails.application.config.assets.precompile += %w( datatables/media/js/dataTables.bootstrap.js )
