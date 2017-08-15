@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //# require dataTables
-//= require matchHeight
+//# require matchHeight
 //= require patternfly
