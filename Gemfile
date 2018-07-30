@@ -46,7 +46,7 @@ group :development, :test do
   gem 'capybara', '~> 2.15'
   gem 'coveralls', require: false
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 3.6'
   gem 'selenium-webdriver'

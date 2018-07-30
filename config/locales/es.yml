@@ -180,6 +180,7 @@ es:
       assignment_not_added: "Ha habido un error añadiendo la asignación"
     new:
       choose_shifts: "Elija turno para %{who}"
+      offspring_not_found: "Ha habido un error encontrando el catecúmeno"
     room:
       capacity: "capacidad"
     shift:
