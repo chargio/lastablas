@@ -212,7 +212,7 @@ es:
     create:
       offspring_added:     "Se añadió el catecúmeno %{offspring}"
       offspring_not_added:  "No se pudo añadir al catecúmeno"
-      invalid_grade: "Para añadir un catecúmeno de este curso contacte directamente con la parroquia, por favor"
+      invalid_grade: "Para añadir un catecúmeno de este curso pase a formalizar la inscripción del 17 al 21 de septiembre en horario de despacho"
     destroy:
       offspring_deleted:     "Se ha borrado el catecúmeno %{offspring}"
       offspring_not_deleted: "No se ha podido borrar el catecúmeno"
